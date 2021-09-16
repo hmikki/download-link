@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>download link</title>
+</head>
+<body>
+<a class="btn-u btn-u-lg" href="javascript:void(0);" onclick="javascript:install();" rel="nofollow">تثبيت التطبيق</a>
+
+<script>
+    function install()
+    {
+        var uagent = navigator.userAgent.toLowerCase();
+        if (uagent.search("iphone") > -1 || uagent.search("ipad") > -1
+            || uagent.search("ipod") > -1)
+            javascript:installApp("itms-services://?action=download-manifest&url=https://appsvb.com/aa/Instagram.plist");
+        else
+            alert('لايمكن تثبيت التطبيق الا من خلال الايفون اوالايباد اوالايبود');
+    }
+    function installApp(url)
+    {
+        window.location = url;
+    }
+</script>
+</body>
+</html>
